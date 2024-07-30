@@ -1,6 +1,7 @@
 # To do List - 1
 -------------
-![1]((https://photos.app.goo.gl/GGG1JFadYhGQdDSq7))
+
+![Application Screenshot]([https://lh3.googleusercontent.com/your-image-link-here.jpg](https://photos.app.goo.gl/GGG1JFadYhGQdDSq7))
 
 This is the interface of the application. It prompts the user to enter any task available to accomplish.
 
