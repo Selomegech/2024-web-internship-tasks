@@ -1,11 +1,11 @@
 # To do List - 1
-
+-------------
 ![1]((https://photos.app.goo.gl/GGG1JFadYhGQdDSq7))
 This is the interface of the application. It prompts the user to enter any task available to accomplish.
----
+
 ![1]((https://photos.app.goo.gl/GLgogP1E2CXpdgMF9))
 Adding a task and pressing the add button will add the task below in a table format with three functional buttons: Done, Delete, and Edit.
----
+
 ![1](https://photos.app.goo.gl/eo4VVLLPFiWzhXCP8)
 When the user tries to add an empty task, it will alert them to add a task first.
 ---
