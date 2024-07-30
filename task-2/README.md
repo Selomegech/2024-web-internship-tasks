@@ -1,4 +1,4 @@
-# To do List - 1
+# To do List - 2 (using type-script)
 -------------
 
 ![1](./screenshots/1.png)
