@@ -1,7 +1,7 @@
 # To do List - 1
 -------------
 
-![1](/screenshots/1.png)
+![1](./screenshots/1.png)
 
 This is the interface of the application. It prompts the user to enter any task available to accomplish.
 
