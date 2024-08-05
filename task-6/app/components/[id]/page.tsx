@@ -1,9 +1,9 @@
-'use client';
+"use client";
 import path from "path";
 import fs from "fs";
 
 import React, { useEffect, useState } from "react";
-import jobData from './jobs.json';
+import jobData from "./jobs.json";
 import { FaMapMarkerAlt, FaPlusCircle } from "react-icons/fa";
 import { FaFireFlameCurved, FaRegCalendarCheck } from "react-icons/fa6";
 import { TiLocationOutline } from "react-icons/ti";
@@ -25,15 +25,14 @@ interface Job {
   };
   when_where: string;
   about: {
-        
-        posted_on: "Jul 1, 2023",
-      deadline: "Jul 31, 2023",
-        location: "Addis Ababa",
-        start_date: "Aug 02, 2023",
-        end_date: "Sep 02, 2023",
-        categories: ["Marketing", "Design"],
-        required_skills: ["Social Media Marketing", "English", "Copywriting"]
-      };
+    posted_on: "Jul 1, 2023";
+    deadline: "Jul 31, 2023";
+    location: "Addis Ababa";
+    start_date: "Aug 02, 2023";
+    end_date: "Sep 02, 2023";
+    categories: ["Marketing", "Design"];
+    required_skills: ["Social Media Marketing", "English", "Copywriting"];
+  };
 }
 
 const JobPost = ({ params }: JobPostProp) => {
@@ -60,9 +59,7 @@ const JobPost = ({ params }: JobPostProp) => {
             {" "}
             Description{" "}
           </h1>
-          <p>
-          {job.description}
-          </p>
+          <p>{job.description}</p>
         </div>
         <div className="py-6">
           {" "}
@@ -71,15 +68,18 @@ const JobPost = ({ params }: JobPostProp) => {
             Responsibilities{" "}
           </h1>
           <ul>
-          <div className="py-6">
-          
-            {job.responsibilities.map((responsibility, index) => (
-              <><div className="flex gap-4"><div className="w-[34px] h-[34px] px-2.5 gap-2.5 rounded-full border-t border-0 ">
-              < GoDotFill  className="text-xl" color="#90ee90" />
+            <div className="py-6">
+              {job.responsibilities.map((responsibility, index) => (
+                <>
+                  <div className="flex gap-4">
+                    <div className="w-[34px] h-[34px] px-2.5 gap-2.5 rounded-full border-t border-0 ">
+                      <GoDotFill className="text-xl" color="#90ee90" />
+                    </div>
+                    <li key={index}>{responsibility}</li>{" "}
+                  </div>{" "}
+                </>
+              ))}{" "}
             </div>
-          <li key={index}>{responsibility}</li> </div> </> 
-        ))} </div>
-           
           </ul>
         </div>
         <div className="py-6">
@@ -89,23 +89,23 @@ const JobPost = ({ params }: JobPostProp) => {
             ideal candidate we want{" "}
           </h1>
           <ul className="py-6">
-          <li  className="flex py-4">
-            <div className="w-[34px] h-[34px] px-2.5 gap-2.5 rounded-full border-t border-0 ">
-              < GoDotFill  className="text-l"  />
-            </div>
-            <b>young({job.ideal_candidate.age}) {job.ideal_candidate.gender} {job.title}</b>
-          </li> 
-          {job.ideal_candidate.traits?.map((trait, index) => (
-          <li key={index} className="flex py-4">
-            <div className="w-[34px] h-[34px] px-2.5 gap-2.5 rounded-full border-t border-0 ">
-              < GoDotFill  className="text-l"  />
-            </div>
-            {trait}
-          </li>
-        ))}
-            
-          
-           
+            <li className="flex py-4">
+              <div className="w-[34px] h-[34px] px-2.5 gap-2.5 rounded-full border-t border-0 ">
+                <GoDotFill className="text-l" />
+              </div>
+              <b>
+                young({job.ideal_candidate.age}) {job.ideal_candidate.gender}{" "}
+                {job.title}
+              </b>
+            </li>
+            {job.ideal_candidate.traits?.map((trait, index) => (
+              <li key={index} className="flex py-4">
+                <div className="w-[34px] h-[34px] px-2.5 gap-2.5 rounded-full border-t border-0 ">
+                  <GoDotFill className="text-l" />
+                </div>
+                {trait}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="py-6">
@@ -119,9 +119,7 @@ const JobPost = ({ params }: JobPostProp) => {
               <FaMapMarkerAlt className="text-xl" color="#26A4FF" />
             </div>
 
-            <p>
-              {job.when_where}
-            </p>
+            <p>{job.when_where}</p>
           </div>
         </div>
       </div>
@@ -196,7 +194,7 @@ const JobPost = ({ params }: JobPostProp) => {
               {job.about.categories[0]}
             </div>
             <div className="bg-orange-50 h-10 border-0 border-yellow-400 text-yellow-600 rounded-full px-3 py-1 flex justify-center items-center text-sm">
-            {job.about.categories[1]}
+              {job.about.categories[1]}
             </div>
           </div>
         </div>
