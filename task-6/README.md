@@ -19,7 +19,7 @@ This project is a part of a series of tasks aimed at building a comprehensive jo
 - React icons
 
 ## Installation and Setup
-1. Clone the repository: `git clone https://github.com/your-username/job-listing-app.git`
+1. Clone the repository: `git clone https://github.com/Selomegech/2024-web-internship-tasks/tree/main/task-6`
 2. Navigate to the project directory: `cd task-6`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
