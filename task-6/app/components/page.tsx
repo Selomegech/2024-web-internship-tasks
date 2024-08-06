@@ -41,17 +41,19 @@ const JobPosts = async () => {
         </div>
       </div>
 
-      {data?.map((d) => (
-        <Link href={`/components/${d.id}`}>
-          <Structure
-            title={d.title}
-            description={d.description}
-            numOfJobs={data.length}
-            categoryone={d.about.categories[0]}
-            categorytwo={d.about.categories[1]}
-          />
-        </Link>
-      ))}
+      <div className="flex flex-col gap-12">
+        {data?.map((d) => (
+          <Link href={`/components/${d.id}`}>
+            <Structure
+              title={d.title}
+              description={d.description}
+              numOfJobs={data.length}
+              categoryone={d.about.categories[0]}
+              categorytwo={d.about.categories[1]}
+            />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

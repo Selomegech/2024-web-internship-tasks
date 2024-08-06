@@ -17,9 +17,9 @@ const Structure = ({
   categorytwo,
 }: StructurProps) => {
   return (
-    <div className="w-3/4 mx-auto flex flex-col text-sm">
-      <div className="flex h-screen">
-        <div className="bg-white shadow-lg rounded-lg w-4/5 h-3/5 flex ">
+    <div className="w-3/4 bg-white shadow-lg rounded-lg mx-auto flex flex-col text-sm py-10">
+      <div className="flex">
+        <div className=" flex ">
           <div className="w-20% px-8 text-gray-600 ">
             <p className="mt-10">
               <img

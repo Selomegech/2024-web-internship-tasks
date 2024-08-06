@@ -37,7 +37,13 @@ interface Job {
 
 const JobPost = ({ params }: JobPostProp) => {
   const [job, setJob] = useState<Job | null>(null);
-
+  let age = {
+    "18-24": "young",
+    "26-35": "adult",
+    "36-45": "middle-aged",
+    "46-55": "senior",
+    "any": "any",
+  }
   useEffect(() => {
     const currJobs: Job[] = jobData.job_postings;
     const foundJob = currJobs.find((job) => job.id === params.id);
@@ -94,7 +100,7 @@ const JobPost = ({ params }: JobPostProp) => {
                 <GoDotFill className="text-l" />
               </div>
               <b>
-                young({job.ideal_candidate.age}) {job.ideal_candidate.gender}{" "}
+                {age[job.ideal_candidate.age]}({job.ideal_candidate.age}) {job.ideal_candidate.gender}{" "}
                 {job.title}
               </b>
             </li>
